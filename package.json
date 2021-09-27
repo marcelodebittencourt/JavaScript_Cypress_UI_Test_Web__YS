@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "cy:run": "cypress run"
+    "start": "my-server -p 3030 --https",
+    "cy:run": "cypress run",
+    "cy:ci": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start https-get://localhost:3030 cy:run"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.4.1"
+    "cypress": "^8.5.0",
+    "start-server-and-test": "^1.14.0"
   },
   "dependencies": {
     "mocha": "^9.1.2"
