@@ -1,4 +1,4 @@
-![](https://github.com/marcelodebittencourt/YieldStreet_UIAutomationTest_JS_Cypress/.github/workflows/tests/badge.svg)
+![](https://github.com/marcelodebittencourt/YieldStreet_UIAutomationTest_JS_Cypress/workflows/tests/badge.svg)
 
 # Pre requisites
 * Node JS: https://nodejs.org/en/
