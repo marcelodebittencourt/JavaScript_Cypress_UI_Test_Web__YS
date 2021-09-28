@@ -1,3 +1,5 @@
+![](https://github.com/marcelodebittencourt/YieldStreet_APIAutomationTest_JS_Axios/.github/workflows/tests/badge.svg)
+
 # Pre requisites
 * Node JS: https://nodejs.org/en/
 
