@@ -12,3 +12,9 @@
 3.  Run the command below to execute the test:
 
 > npm run cy:run -- --spec ".\cypress\integration\1-getting-started\purchase_tshirts_test.js"
+
+# Main files
+
+* Test: https://github.com/marcelodebittencourt/YieldStreet_UIAutomationTest_JS_Cypress/blob/master/cypress/integration/1-getting-started/purchase_tshirts_test.js
+
+* GitHub Actions: https://github.com/marcelodebittencourt/YieldStreet_UIAutomationTest_JS_Cypress/blob/master/.github/workflows/test.yml
