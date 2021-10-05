@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-      "target": "es5",
-      "lib": ["es5", "dom"],
+      "target": "ES2021",
+      "lib": ["ES2021", "dom"],
       "types": ["cypress"]
     },
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts", "integration/elements/pages/ProductsPage.js", "integration/elements/pages/HomePage.js", "integration/elements/pages/CheckoutPage.js", "integration/elements/pages/CheckoutOverviewPage.js", "integration/elements/pages/CartPage.js", "integration/1-getting-started/purchase_tshirts_test.js"]
   }

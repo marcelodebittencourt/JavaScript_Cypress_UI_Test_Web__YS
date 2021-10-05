@@ -6,9 +6,10 @@ class ProductPage {
     } 
 
     checkItemDescriptions(){
-        //listItemDescription: ElementArrayFinder;
-        //listItemDescription = cy.get('div.inventory_item_description');
+        //cy.get('div.inventory_item_description').each($el: JQuery<HTMLElement>, index: number, list: HTMLElement[]) => {
 
+        //}
+        
     }
 
     addFirstTShirtOnShoppingCart() {
