@@ -1,9 +1,17 @@
+import cypress from 'cypress';
+
 class ProductPage {
     visit() {
         cy.url()
         .should('include', '/inventory.html')
         cy.contains('Products');
     } 
+
+    checkItemDescriptions(){
+        //listItemDescription: ElementArrayFinder;
+        //listItemDescription = cy.get('div.inventory_item_description');
+
+    }
 
     addFirstTShirtOnShoppingCart() {
         const buttonAdd = cy.get('#add-to-cart-sauce-labs-bolt-t-shirt');
