@@ -1,19 +1,18 @@
 import HomePage from '../elements/pages/HomePage'
 import ProductsPage from '../elements/pages/ProductsPage'
 import CartPage from '../elements/pages/CartPage'
+import CheckoutPage from '../elements/pages/CheckoutPage'
 
 describe('E-commerce full puchase', function() {
     it('sign in and buy t-shirts', () => {
         const home = new HomePage();
         home.visit();
-
         home.fillUsername('standard_user');
         home.fillPassword('secret_sauce')
         home.submit();
 
         const products = new ProductsPage();
         products.visit();
-
         products.addFirstTShirtOnShoppingCart();
         products.addSecondTShirtOnShoppingCart();
         products.goToShoppingCart();     
@@ -22,15 +21,12 @@ describe('E-commerce full puchase', function() {
         cart.visit()
         cart.goToCheckout();
 
-        // cy.url()
-        //     .should('include', 'checkout-step-one.html')
-        // cy.contains('Checkout: Your Information')
-
-        // //Fill out the client information
-        // cy.get('#first-name').type('Marcelo')
-        // cy.get('#last-name').type('Bittencourt')
-        // cy.get('#postal-code').type('123456');
-        // cy.get('#continue').click()
+        const checkout = new CheckoutPage();
+        checkout.visit();
+        checkout.fillFirstName('Marcelo');
+        checkout.fillLastName('Bittencourt');
+        checkout.fillPostalCode('123456');
+        checkout.goToCheckoutStepTwo();
 
         // cy.url()
         //     .should('include', 'checkout-step-two.html')
