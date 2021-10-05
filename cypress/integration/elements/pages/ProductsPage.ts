@@ -1,7 +1,13 @@
-//import { contains } from "cypress/types/jquery";
+import Util from './Util'
 var assert = chai.assert;
 
 class ProductPage {
+    util: Util;
+    
+    constructor() {
+        this.util = new Util();
+    }
+
     visit() {
         cy.url()
         .should('include', '/inventory.html')
@@ -25,8 +31,11 @@ class ProductPage {
     }
 
     addFirstTShirtOnShoppingCart() {
+        //this.util.clickElement("#add-to-cart-sauce-labs-bolt-t-shirt");
+        
         const buttonAdd = cy.get('#add-to-cart-sauce-labs-bolt-t-shirt');
         buttonAdd.click();
+        
     }
 
     addSecondTShirtOnShoppingCart() {
