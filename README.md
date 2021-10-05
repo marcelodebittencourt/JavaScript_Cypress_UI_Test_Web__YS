@@ -11,7 +11,7 @@
 >npm install
 3.  Run the command below to execute the test:
 
-> npm run cy:run -- --spec ".\cypress\integration\1-getting-started\purchase_tshirts_test.js"
+> npm run cy:run -- --spec ".\cypress\integration\1-getting-started\purchase_tshirts_test.ts"
 
 # Main files
 
@@ -21,7 +21,8 @@
 
 # Automation Architecture
 
-I added in “.github/workflow” a yml script that executes the tests using GitHub Actions folder for both test levels(UI and API). CI/CD usage, considering that I uploaded UI and API tests in different GitHub repositories, can be implemented locally or in a cloud based service. I would consider using GitHub Actions, adding each GitHub Actions in an integrated script using one job for each test level. So we would have a pipeline were the next stage would be executed only if the previous one was executed successfully, in  this  case, UI would run the tests if the API tests ran ok. 
+I added in “.github/workflow” a yml script that executes the tests using GitHub Actions folder for both test levels(UI and API). CI/CD usage, considering that I uploaded UI and API tests in different GitHub repositories, can be implemented locally or in a cloud based service. I would consider using GitHub Actions, adding each GitHub Actions in an integrated script using one job for each test level. So we would have a pipeline were the next stage would be executed only if the previous one was executed successfully, in  this  case, UI would run the tests if the API tests ran ok.
+The project uses Page Objects design pattern.
 
 # Evaluation considerations
 

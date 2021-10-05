@@ -1,5 +1,3 @@
-import cypress from 'cypress';
-
 class ProductPage {
     visit() {
         cy.url()
