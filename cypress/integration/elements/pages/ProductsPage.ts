@@ -5,11 +5,12 @@ class ProductPage {
         cy.contains('Products');
     } 
 
-    checkItemDescriptions(){
-        //cy.get('div.inventory_item_description').each($el: JQuery<HTMLElement>, index: number, list: HTMLElement[]) => {
-
-        //}
-        
+    addTShirtItensOnShoppingCart(){
+        cy.get('div.inventory_item_description').each(($el: JQuery<HTMLElement>, index, $list) => {
+            if($el.text() == 'T-Shirt') {
+                cy.wrap($el).get('button').click();
+            }            
+        })        
     }
 
     addFirstTShirtOnShoppingCart() {
@@ -25,6 +26,10 @@ class ProductPage {
     goToShoppingCart() {
         const buttonShoppingCart = cy.get('a.shopping_cart_link');
         buttonShoppingCart.click();
+    }
+
+    checkNumberOfItensShoppingCart(value) {
+        cy.get('span.shopping_cart_badge').contains(value);
     }
 }
 
