@@ -3,8 +3,9 @@ import ProductsPage from '../elements/pages/ProductsPage'
 import CartPage from '../elements/pages/CartPage'
 import CheckoutPage from '../elements/pages/CheckoutPage'
 import CheckoutOverviewPage from '../elements/pages/CheckoutOverviewPage'
+import CheckoutCompletePage from '../elements/pages/CheckoutCompletePage'
 
-describe('E-commerce full puchase', function() {
+describe('E-commerce full purchase', function() {
     it('sign in and buy t-shirts', () => {
         const home = new HomePage();
         home.visit();
@@ -33,8 +34,8 @@ describe('E-commerce full puchase', function() {
         checkoutOverview.visit();
         checkoutOverview.finishPurchase();        
 
-        // cy.url()
-        //     .should('include', 'checkout-complete.html')
-        // cy.contains('THANK YOU FOR YOUR ORDER')
+        const checkoutComplete = new CheckoutCompletePage();
+        checkoutComplete.visit();
+        checkoutComplete.checkThankYouMessage();
     })
 })
