@@ -1,5 +1,6 @@
 import HomePage from '../elements/pages/HomePage'
 import ProductsPage from '../elements/pages/ProductsPage'
+import CartPage from '../elements/pages/CartPage'
 
 describe('E-commerce full puchase', function() {
     it('sign in and buy t-shirts', () => {
@@ -15,12 +16,11 @@ describe('E-commerce full puchase', function() {
 
         products.addFirstTShirtOnShoppingCart();
         products.addSecondTShirtOnShoppingCart();
-        products.goToShoppingCart();
-
-        // cy.url()
-        //     .should('include', 'cart.html')
-        // cy.contains('Your Cart')
-        // cy.get('#checkout').click()
+        products.goToShoppingCart();     
+        
+        const cart = new CartPage();
+        cart.visit()
+        cart.goToCheckout();
 
         // cy.url()
         //     .should('include', 'checkout-step-one.html')
