@@ -1,4 +1,5 @@
 import HomePage from '../elements/pages/HomePage'
+import ProductsPage from '../elements/pages/ProductsPage'
 
 describe('E-commerce full puchase', function() {
     it('sign in and buy t-shirts', () => {
@@ -9,21 +10,8 @@ describe('E-commerce full puchase', function() {
         home.fillPassword('secret_sauce')
         home.submit();
 
-        cy.url()
-        .should('include', '/inventory.html')
-        cy.contains('Products');
-
-        //cy.visit('https://www.saucedemo.com')
-        //cy.contains('Accepted usernames are')
-
-        //Fill out the login form
-        //cy.get('#user-name').type('standard_user')
-        //cy.get('#password').type('secret_sauce')
-        //cy.get('#login-button').click()
-
-        // cy.url()
-        //     .should('include', '/inventory.html')
-        // cy.contains('Products')
+        const products = new ProductsPage();
+        products.visit();
 
         // //Click on T-shirt products
         // cy.get('#add-to-cart-sauce-labs-bolt-t-shirt').click()
