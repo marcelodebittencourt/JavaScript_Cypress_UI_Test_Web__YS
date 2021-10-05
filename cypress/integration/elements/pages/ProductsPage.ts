@@ -1,3 +1,6 @@
+//import { contains } from "cypress/types/jquery";
+var assert = chai.assert;
+
 class ProductPage {
     visit() {
         cy.url()
@@ -6,10 +9,18 @@ class ProductPage {
     } 
 
     addTShirtItensOnShoppingCart(){
-        cy.get('div.inventory_item_description').each(($el: JQuery<HTMLElement>, index, $list) => {
-            if($el.text() == 'T-Shirt') {
-                cy.wrap($el).get('button').click();
-            }            
+        let text:string = '';
+        let foundText:boolean = false;
+        cy.get('div.inventory_item_description').each(($el, index, $list) => {
+            foundText = false;
+            cy.wrap($el).find('.inventory_item_name').should(($div) => {
+                text = $div.text();   
+                //foundText = text.includes('T-Shirt')                
+                //if(foundText){
+                if(text.indexOf('T-Shirt') !== -1) {   
+                    cy.wrap($el).get('button').click();
+                }
+            })                       
         })        
     }
 
