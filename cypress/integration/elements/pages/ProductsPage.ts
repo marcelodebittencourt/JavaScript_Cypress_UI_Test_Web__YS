@@ -19,14 +19,21 @@ class ProductPage {
         let foundText:boolean = false;
         cy.get('div.inventory_item_description').each(($el, index, $list) => {
             foundText = false;
-            cy.wrap($el).find('.inventory_item_name').should(($div) => {
-                text = $div.text();   
+            const itemName = cy.wrap($el).find('.inventory_item_name');
+            itemName.then(($in) => {
+                const txt = $in.text();
+                cy.log(txt);
+            })
+            //cy.wrap($el).find('.inventory_item_name').should(($div) => {
+                //text = $div.text();   
+                //cy.log(text);
                 //foundText = text.includes('T-Shirt')                
                 //if(foundText){
+                /*
                 if(text.indexOf('T-Shirt') !== -1) {   
                     cy.wrap($el).get('button').click();
                 }
-            })                       
+                */                                   
         })        
     }
 

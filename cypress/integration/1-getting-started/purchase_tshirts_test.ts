@@ -23,9 +23,11 @@ describe('E-commerce full purchase', function () {
         products.visit();
         //products.addTShirtItensOnShoppingCart();
        
+        
         products.addFirstTShirtOnShoppingCart();
         products.checkNumberOfItensShoppingCart('1')
         products.addSecondTShirtOnShoppingCart();
+        
         
         products.checkNumberOfItensShoppingCart('2');
         products.goToShoppingCart();     
