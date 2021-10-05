@@ -13,10 +13,9 @@ describe('E-commerce full puchase', function() {
         const products = new ProductsPage();
         products.visit();
 
-        // //Click on T-shirt products
-        // cy.get('#add-to-cart-sauce-labs-bolt-t-shirt').click()
-        // cy.get('div#inventory_container > div > div#inventory_container > div.inventory_list > div.inventory_item:nth-child(6)  > div.inventory_item_description > div.pricebar > button').click()
-        // cy.get('a.shopping_cart_link').click()
+        products.addFirstTShirtOnShoppingCart();
+        products.addSecondTShirtOnShoppingCart();
+        products.goToShoppingCart();
 
         // cy.url()
         //     .should('include', 'cart.html')
