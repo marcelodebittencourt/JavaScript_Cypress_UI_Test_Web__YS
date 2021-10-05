@@ -6,15 +6,18 @@ class ProductPage {
     } 
 
     addFirstTShirtOnShoppingCart() {
-        cy.get('#add-to-cart-sauce-labs-bolt-t-shirt').click()
+        const buttonAdd = cy.get('#add-to-cart-sauce-labs-bolt-t-shirt');
+        buttonAdd.click();
     }
 
     addSecondTShirtOnShoppingCart() {
-        cy.get('div#inventory_container > div > div#inventory_container > div.inventory_list > div.inventory_item:nth-child(6)  > div.inventory_item_description > div.pricebar > button').click()
+        const buttonAdd = cy.get('div#inventory_container > div > div#inventory_container > div.inventory_list > div.inventory_item:nth-child(6)  > div.inventory_item_description > div.pricebar > button');
+        buttonAdd.click();
     }
 
     goToShoppingCart() {
-        cy.get('a.shopping_cart_link').click()
+        const buttonShoppingCart = cy.get('a.shopping_cart_link');
+        buttonShoppingCart.click();
     }
 }
 

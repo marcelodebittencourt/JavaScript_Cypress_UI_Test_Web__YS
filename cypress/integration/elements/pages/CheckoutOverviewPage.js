@@ -6,7 +6,8 @@ class CheckoutOverviewPage {
     }
 
     finishPurchase() {
-        cy.get('#finish').click()
+        const buttonFinish = cy.get('#finish');
+        buttonFinish.click();
     }
 
 }

@@ -6,7 +6,8 @@ class CartPage {
     }
 
     goToCheckout() {
-        cy.get('#checkout').click();
+        const buttonCheckout = cy.get('#checkout');
+        buttonCheckout.click();
     }
 
 }

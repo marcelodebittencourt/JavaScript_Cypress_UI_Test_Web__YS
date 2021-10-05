@@ -6,19 +6,23 @@ class CheckoutPage {
     }
 
     fillFirstName(value){
-        cy.get('#first-name').type(value);
+        const fieldFirstName = cy.get('#first-name');
+        fieldFirstName.type(value);
     }
 
     fillLastName(value){
-        cy.get('#last-name').type(value);
+        const fieldLastName = cy.get('#last-name');
+        fieldLastName.type(value);
     }
 
     fillPostalCode(value){
-        cy.get('#postal-code').type(value);
+        const fieldPostalCode = cy.get('#postal-code');
+        fieldPostalCode.type(value);
     }
 
     goToCheckoutOverview() {
-        cy.get('#continue').click()
+        const buttonContinue = cy.get('#continue');
+        buttonContinue.click();
     }
 
 }
