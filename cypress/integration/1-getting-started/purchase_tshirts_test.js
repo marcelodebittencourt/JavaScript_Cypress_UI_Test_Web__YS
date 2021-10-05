@@ -2,6 +2,7 @@ import HomePage from '../elements/pages/HomePage'
 import ProductsPage from '../elements/pages/ProductsPage'
 import CartPage from '../elements/pages/CartPage'
 import CheckoutPage from '../elements/pages/CheckoutPage'
+import CheckoutOverviewPage from '../elements/pages/CheckoutOverviewPage'
 
 describe('E-commerce full puchase', function() {
     it('sign in and buy t-shirts', () => {
@@ -26,12 +27,11 @@ describe('E-commerce full puchase', function() {
         checkout.fillFirstName('Marcelo');
         checkout.fillLastName('Bittencourt');
         checkout.fillPostalCode('123456');
-        checkout.goToCheckoutStepTwo();
+        checkout.goToCheckoutOverview();
 
-        // cy.url()
-        //     .should('include', 'checkout-step-two.html')
-        // cy.contains('Checkout: Overview')
-        // cy.get('#finish').click()
+        const checkoutOverview = new CheckoutOverviewPage();
+        checkoutOverview.visit();
+        checkoutOverview.finishPurchase();        
 
         // cy.url()
         //     .should('include', 'checkout-complete.html')

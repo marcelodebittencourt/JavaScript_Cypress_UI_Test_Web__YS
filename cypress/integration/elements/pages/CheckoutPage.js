@@ -17,7 +17,7 @@ class CheckoutPage {
         cy.get('#postal-code').type(value);
     }
 
-    goToCheckoutStepTwo() {
+    goToCheckoutOverview() {
         cy.get('#continue').click()
     }
 
